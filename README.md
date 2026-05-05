@@ -40,7 +40,7 @@ The upcoming World Bank review is the immediate legal opportunity to redesign th
   year = {2026},
   type = {Bachelor's Thesis},
   address = {Mumbai, India},
-  url = {https://github.com/HariKrishnaKR1/loss-and-damage}
+  url = {https://github.com/HariKrishnaKR1/loss-and-dmg}
 }
 ```
 
