@@ -8,13 +8,17 @@
 
 ## Abstract
 
-Loss and damage (L&D) was central to climate talks for more than two decades before being formally set up in the Warsaw International Mechanism (2013) and Article 8 of the Paris Agreement (2015). However, neither of these milestones led to a clear definition of L&D, nor an understanding of what it involves or who is accountable for it. The debate has been between developed and developing countries, with the former avoiding any talk of "liability and compensation" and the latter pushing for it.
+Developing countries suffered $320 billion in climate losses in 2024 and projections reach $1.7 trillion annually by 2050. The international community has negotiated for three decades yet the only dedicated global mechanism held just $828 million as of late 2025. This sum is less than 0.2 per cent of the annual need and the gap shows no sign of closing under the current design.
 
-Using Fairclough's three-part model for critical discourse analysis, this thesis tracks the institutional evolution of L&D from its initial proposal by AOSIS in 1991 to the setting up of the Fund for Responding to Loss and Damage (FRLD) at COP28. It shows that although the FRLD has been established, the shift from "liability and compensation" to "cooperation and facilitation" structurally limits the Fund's potential to mobilise revenue. By comparing text from key decisions (Decision 2/CP.19 and Decision 1/CP.21) with current funding levels, the study shows that L&D finance remains largely discretionary and lacks the authority to raise the mandatory capital needed to address climate-induced losses.
+This study argues that this gap is structural and built into the legal architecture of the fund itself. Negotiators systematically removed liability language from every major UNFCCC agreement between 1991 and 2023. This dynamic is named destructive ambiguity, where textual vagueness enables consensus but destroys the capacity to generate predictable finance.
 
-#### Keywords
+Drawing on Fairclough's critical discourse analysis, this study examined UNFCCC decision texts and negotiating documents from 1991 to 2024. Analysis revealed how liability-linked terms declined while cooperation language rose and how mandatory financial proposals were rejected or diluted before reaching a final text.
 
-loss and damage; climate change negotiations; critical discourse analysis; Warsaw International Mechanism; compensation; climate justice; UNFCCC
+The findings confirm three things about the current financing architecture. First, exclusion of liability translated directly into clauses that forbid mandatory targets and leave contribution volumes entirely to donor discretion. Second, the free-rider problem has become a designed feature of a voluntary model without enforcement mechanisms or contribution formulas. Third, solidarity levies offer the most viable path to predictable revenue without triggering the liability red lines that developed nations have enforced since 1991.
+
+The upcoming World Bank review is the immediate legal opportunity to redesign the fund's revenue architecture through COP decisions as no improvement in governance can close the gap between the billions needed. Thus, addressing loss and damage requires changing the legal basis for contributions and the clock is already running.
+
+**Keywords:** loss and damage, UNFCCC, Fund for Responding to Loss and Damage, critical discourse analysis, destructive ambiguity, liability, climate finance, constructive ambiguity, fiscal authority, voluntary contributions
 
 #### Quick Links
 
