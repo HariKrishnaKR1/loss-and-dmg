@@ -54,8 +54,6 @@ loss-and-dmg/
 │   └── Thesis.docx                                   # Thesis manuscript (Word)
 │
 ├── figures/
-│   ├── hero.png                                      # Conceptual visualization of L&D architecture
-│   ├── Poster 1.png                                  # Research poster (general)
 │   └── Poster 1 - History of Discourse in L&D.png   # Research poster: Discourse timeline
 │
 ├── index.html                                        # GitHub Pages landing page
