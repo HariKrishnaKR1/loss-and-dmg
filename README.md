@@ -33,7 +33,7 @@ The upcoming World Bank review is the immediate legal opportunity to redesign th
 #### Citation (BibTeX)
 
 ```bibtex
-@mastersthesis{harikrishna2026evolution,
+@thesis{harikrishna2026evolution,
   author = {Hari, Krishna K. R.},
   title = {Tracking the Evolution of the Loss and Damage Financing Architecture under the UNFCCC},
   school = {Tata Institute of Social Sciences, Mumbai},
