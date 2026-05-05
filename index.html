@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thesis | Loss and Damage Financing Architecture</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --secondary: #334155;
+            --accent: #b5905d;
+            --background: #f8fafc;
+            --surface: #ffffff;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --glass: rgba(255, 255, 255, 0.8);
+            --border: rgba(226, 232, 240, 0.8);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.5rem 0;
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding-top: 10rem;
+            padding-bottom: 6rem;
+            background: radial-gradient(circle at top right, #e2e8f0 0%, #f8fafc 50%);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .hero p.subtitle {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+            font-style: italic;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 500px;
+            background: url('figures/hero.png') no-repeat center center;
+            background-size: cover;
+            border-radius: 1rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        /* Content Sections */
+        section {
+            padding: 6rem 0;
+        }
+
+        .section-header {
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-header .line {
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent);
+            margin: 0 auto;
+        }
+
+        /* Abstract & Exec Summary */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .card {
+            background: var(--surface);
+            padding: 3rem;
+            border-radius: 1rem;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .card p {
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        /* Findings */
+        .findings-list {
+            list-style: none;
+        }
+
+        .findings-list li {
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            gap: 2rem;
+        }
+
+        .findings-list li span.number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent);
+            opacity: 0.3;
+        }
+
+        .findings-list li div h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        /* Citation */
+        .citation-box {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem;
+            position: relative;
+            overflow-x: auto;
+        }
+
+        /* Footer */
+        footer {
+            padding: 4rem 0;
+            background-color: var(--primary);
+            color: #94a3b8;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 1rem;
+        }
+
+        /* Animations */
+        [data-reveal] {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        [data-reveal].revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .grid { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">Thesis Portfolio</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#findings">Findings</a>
+                <a href="#citation">Citation</a>
+                <a href="docs/Thesis.pdf" target="_blank">Download PDF</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1 data-reveal>Tracking the Evolution of the Loss and Damage Financing Architecture</h1>
+            <p class="subtitle" data-reveal>A Critical Discourse Analysis of the Fund for Responding to Loss and Damage (FRLD) under the UNFCCC</p>
+            <a href="docs/Thesis.pdf" class="btn" data-reveal>Read the Paper</a>
+            <div class="hero-image" data-reveal></div>
+        </div>
+    </header>
+
+    <section id="about" class="container">
+        <div class="section-header" data-reveal>
+            <h2>Research Overview</h2>
+            <div class="line"></div>
+        </div>
+        <div class="grid">
+            <div class="card" data-reveal>
+                <h3>Introduction</h3>
+                <p>This research examines the institutional and textual evolution of Loss and Damage (L&D) finance. While L&D has gained recognition as the "third pillar" of climate action, it remains structurally underfunded.</p>
+                <p>This thesis investigates how changes in negotiating language—shifting from "liability and compensation" to "cooperation and facilitation"—have impacted the fiscal authority of the FRLD.</p>
+            </div>
+            <div class="card" data-reveal>
+                <h3>Executive Summary</h3>
+                <p>The study finds that the FRLD's architecture is constrained by a "destructive ambiguity" that prioritizes consensus over capital mobilization.</p>
+                <p>Paragraph 51 of Decision 1/CP.21 explicitly excludes liability. This exclusion is not merely political but structural, directly limiting the Fund's legal authority to enforce mandatory contributions.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="findings" style="background-color: white;">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <h2>Key Research Findings</h2>
+                <div class="line"></div>
+            </div>
+            <ul class="findings-list">
+                <li data-reveal>
+                    <span class="number">01</span>
+                    <div>
+                        <h4>The Normative Shift</h4>
+                        <p>UNFCCC texts from 1991 to 2024 show a systematic decline in liability-related terms in favor of voluntary cooperation, transitioning L&D from a legal obligation to a discretionary act of solidarity.</p>
+                    </div>
+                </li>
+                <li data-reveal>
+                    <span class="number">02</span>
+                    <div>
+                        <h4>Structural Limitations</h4>
+                        <p>The exclusion of liability in the Paris Agreement acts as a foundational legal limit, rendering financial contributions entirely discretionary and removing the juridical link to historical emissions.</p>
+                    </div>
+                </li>
+                <li data-reveal>
+                    <span class="number">03</span>
+                    <div>
+                        <h4>The Revenue Authority Gap</h4>
+                        <p>Total pledges as of 2025 account for less than 0.2% of the projected annual need. Without mandatory revenue-raising authority, the Fund remains structurally incapable of closing the gap.</p>
+                    </div>
+                </li>
+                <li data-reveal>
+                    <span class="number">04</span>
+                    <div>
+                        <h4>Institutional Incompatibility</h4>
+                        <p>Hosting by the World Bank subjects the Fund to fiduciary architectures favoring market-return logic, which is fundamentally at odds with addressing irreversible and non-economic losses.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="citation" class="container">
+        <div class="section-header" data-reveal>
+            <h2>How to Cite</h2>
+            <div class="line"></div>
+        </div>
+        <div class="card" data-reveal>
+            <div class="citation-box">
+@mastersthesis{harikrishna2026evolution,
+  author = {Hari Krishna, K. R.},
+  title = {Tracking the Evolution of the Loss and Damage Financing Architecture under the UNFCCC},
+  school = {Tata Institute of Social Sciences, Mumbai},
+  year = {2026},
+  type = {Master's Thesis},
+  address = {Mumbai, India},
+  url = {https://github.com/YOUR_USERNAME/loss-damage-thesis}
+}
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 K R Hari Krishna. All rights reserved.</p>
+            <p>Tata Institute of Social Sciences, Mumbai</p>
+        </div>
+    </footer>
+
+    <script>
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('[data-reveal]').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
